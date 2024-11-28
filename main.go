@@ -265,6 +265,7 @@ func (parser *EthereumParser) processTransactions(txHashes []string) {
 }
 
 func (parser *EthereumParser) monitorBlocks(startBlock int) {
+
 	currentBlock := startBlock
 
 	for {
@@ -339,6 +340,7 @@ func getTransactionsHandler(w http.ResponseWriter, r *http.Request) {
 // ///////////////////////////////////////////////
 
 func main() {
+
 	client := NewEthereumRPCClient(testnet)
 	storage := NewMemoryStorage()
 	globalParser = NewEthereumParser(client, storage)

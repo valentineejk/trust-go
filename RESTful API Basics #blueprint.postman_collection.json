@@ -28,7 +28,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/transactions?address=0x627306090abaB3A6e1400e9345bC60c78a8BEf57",
+					"raw": "http://localhost:8080/transactions?address=0x",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,7 +40,7 @@
 					"query": [
 						{
 							"key": "address",
-							"value": "0x627306090abaB3A6e1400e9345bC60c78a8BEf57"
+							"value": "0x"
 						}
 					]
 				},
@@ -70,7 +70,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"0x520148A9844ACBc3dda0DaA1bCB3071DB0FdA45b\"\n}",
+					"raw": "{\n\t\"address\": \"0x\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
