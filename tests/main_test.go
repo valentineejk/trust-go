@@ -1,12 +1,10 @@
 package tests
 
 import (
-	"sync"
 	"testing"
 
 	"github.com/valentineejk/trust-go/internal/storage"
 	"github.com/valentineejk/trust-go/internal/transactions"
-	"github.com/valentineejk/trust-go/models"
 	"github.com/valentineejk/trust-go/utils"
 )
 
@@ -36,15 +34,4 @@ func Test_InvalidAddress(t *testing.T) {
 	if parser.Subscribe(invalidAddress) {
 		t.Errorf("Expected invalid address to be rejected, got true")
 	}
-}
-
-type MockNotificationService struct {
-	Notifications []models.Transaction
-	Mu            sync.Mutex
-}
-
-func (m *MockNotificationService) SendNotification(address string, txn models.Transaction) {
-	m.Mu.Lock()
-	defer m.Mu.Unlock()
-	m.Notifications = append(m.Notifications, txn)
 }
